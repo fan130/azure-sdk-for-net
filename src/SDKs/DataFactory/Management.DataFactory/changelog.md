@@ -12,6 +12,7 @@
   * Add Salesforce Sink
   * Add jsonNodeReference and jsonPathDefinition to JSONFormat
   * Support providing Salesforce passwords and security tokens as SecureStrings or as secrets in Azure Key Vault.
+  * Add a property for managed dedicated integration runtime to support custom setup script.
 
 ## Version 0.2.0-preview
 

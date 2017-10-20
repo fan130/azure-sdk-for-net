@@ -33,9 +33,12 @@ namespace Microsoft.Azure.Management.DataFactory.Models
         /// </summary>
         /// <param name="catalogInfo">Catalog information for managed dedicated
         /// integration runtime.</param>
-        public IntegrationRuntimeSsisProperties(IntegrationRuntimeSsisCatalogInfo catalogInfo = default(IntegrationRuntimeSsisCatalogInfo))
+        /// <param name="customSetupScriptProperties">Custom setup script
+        /// properties for a managed dedicated integration runtime.</param>
+        public IntegrationRuntimeSsisProperties(IntegrationRuntimeSsisCatalogInfo catalogInfo = default(IntegrationRuntimeSsisCatalogInfo), IntegrationRuntimeCustomSetupScriptProperties customSetupScriptProperties = default(IntegrationRuntimeCustomSetupScriptProperties))
         {
             CatalogInfo = catalogInfo;
+            CustomSetupScriptProperties = customSetupScriptProperties;
             CustomInit();
         }
 
@@ -52,6 +55,13 @@ namespace Microsoft.Azure.Management.DataFactory.Models
         public IntegrationRuntimeSsisCatalogInfo CatalogInfo { get; set; }
 
         /// <summary>
+        /// Gets or sets custom setup script properties for a managed dedicated
+        /// integration runtime.
+        /// </summary>
+        [JsonProperty(PropertyName = "customSetupScriptProperties")]
+        public IntegrationRuntimeCustomSetupScriptProperties CustomSetupScriptProperties { get; set; }
+
+        /// <summary>
         /// Validate the object.
         /// </summary>
         /// <exception cref="Rest.ValidationException">
@@ -62,6 +72,10 @@ namespace Microsoft.Azure.Management.DataFactory.Models
             if (CatalogInfo != null)
             {
                 CatalogInfo.Validate();
+            }
+            if (CustomSetupScriptProperties != null)
+            {
+                CustomSetupScriptProperties.Validate();
             }
         }
     }
