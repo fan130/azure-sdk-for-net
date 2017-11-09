@@ -12,7 +12,7 @@ using Xunit;
 
 namespace Microsoft.Rest.ClientRuntime.Tracing.Tests
 {
-    public class EtwTracingInterceptorTest : IDisposable
+    internal class EtwTracingInterceptorTest : IDisposable
     {
         // Globally defined session is needed since we are running multiple traces
         private readonly TraceEventSession _eventSession;

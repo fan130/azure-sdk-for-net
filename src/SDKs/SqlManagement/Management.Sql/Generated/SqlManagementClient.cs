@@ -247,11 +247,6 @@ namespace Microsoft.Azure.Management.Sql
         public virtual ISyncMembersOperations SyncMembers { get; private set; }
 
         /// <summary>
-        /// Gets the ISubscriptionUsagesOperations.
-        /// </summary>
-        public virtual ISubscriptionUsagesOperations SubscriptionUsages { get; private set; }
-
-        /// <summary>
         /// Gets the IVirtualNetworkRulesOperations.
         /// </summary>
         public virtual IVirtualNetworkRulesOperations VirtualNetworkRules { get; private set; }
@@ -502,7 +497,6 @@ namespace Microsoft.Azure.Management.Sql
             SyncAgents = new SyncAgentsOperations(this);
             SyncGroups = new SyncGroupsOperations(this);
             SyncMembers = new SyncMembersOperations(this);
-            SubscriptionUsages = new SubscriptionUsagesOperations(this);
             VirtualNetworkRules = new VirtualNetworkRulesOperations(this);
             DatabaseOperations = new DatabaseOperations(this);
             ServerDnsAliases = new ServerDnsAliasesOperations(this);

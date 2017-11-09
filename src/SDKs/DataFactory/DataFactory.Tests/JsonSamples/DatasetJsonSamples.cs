@@ -468,26 +468,5 @@ namespace DataFactory.Tests.JsonSamples
         }
     }
 }";
-
-        [JsonSample]
-        public const string SapCloudForCustomerResourceDataset = @"
-{
-    name: ""SapCloudForCustomerResourceDataset"",
-    properties:
-    {
-        type: ""SapCloudForCustomerResource"",
-        linkedServiceName: 
-        {  
-            referenceName : ""ls"",
-            type : ""LinkedServiceReference""
-        },
-        typeProperties:
-        {            
-            path: ""LeadCollection""
-        }
-    }
-}
-";
-
     }
 }
